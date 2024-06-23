@@ -4,7 +4,7 @@
 
 Write a Python function `custom_sort(lst)` that sorts a list of integers such that all even numbers come before all odd numbers, and both even and odd numbers are sorted in ascending order.
 
-* E.g.:`lst = [5, 8, 6, 7, 3]` should be sorted to `[6, 8, 3, 5, 7]`
+* E.g.: `lst = [5, 8, 6, 7, 3]` should be sorted to `[6, 8, 3, 5, 7]`
 
 ## 📖 Learning Objective 📘
 - Understand list manipulation
@@ -17,7 +17,11 @@ Write a Python function `custom_sort(lst)` that sorts a list of integers such th
 
 ## 📑 Accessing Test Reports 🧾
 An HTML report and a coverage report will be generated on push or pull request, and can be found by following the steps bellow:
-1. Navigate to the [Actions tab](https://github.com/Northeastern-University-SV/pyLab/actions) in your repository.
+1. Navigate to the *Actions* tab of your repository 
+```jsx
+https://github.com/Northeastern-University-SV/<name_of_repository_created>/actions
+```
+* Note: Replace `name_of_repository_created` with your repository.  
 2. Find the workflow run for your latest push.
 3. Download the `test-report` and `coverage-report` artifacts.
 

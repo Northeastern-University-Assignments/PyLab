@@ -17,13 +17,16 @@ The problem statements are available at each exercise's sub-folders:
 1. Clone the Repository  
  Open your terminal and enter the following command to clone the repository:
    ```jsx   
-   git clone https://github.com/Northeastern-University-SV/pyLab.git
+   git clone https://github.com/Northeastern-University-SV/<name_of_repository_created>.git
    ```
-   Navigate to the folder where repository is cloned:
+* Note: Replace `name_of_repository_created` with your repository. URL can be found at:  
+![Python Lab Exercises](./media/git_clone_link.png)
+
+2. Navigate to the folder where repository is cloned:
    ```jsx   
    cd pylab
    ```
-2. Pull the repository:
+3. Pull the repository:
    ```jsx
    git pull origin main
    ```
@@ -34,10 +37,11 @@ The problem statements are available at each exercise's sub-folders:
 ## Want it simpler? 😓
 You can use the [GitHub Desktop](https://desktop.github.com/) app to get started hasstle free.  
 1. 🪞 Clone Repository from `File` menu-tab.
-2. 🔗 Enter the path and the URL to the starter repository:
+2. 🔗 Enter the path and the URL to the repository that just got created:
    ```jsx   
-   https://github.com/Northeastern-University-SV/pyLab.git
+   https://github.com/Northeastern-University-SV/<name_of_repository_created>.git
    ```
+* Note: Replace `name_of_repository_created` with your repository. 
 3. 🔁 Once cloned, fetch origin.
 4. ✚ The changes done in the path would be reflected in the sidebar of the application. 
 5. ✍️ Enter a meaningful message in the `Summary` and `Commit to *main*`
@@ -53,7 +57,7 @@ You can use the [GitHub Desktop](https://desktop.github.com/) app to get started
    git add .
    git commit -m "Completed Exercise X"
    ```
-   Write descriptive commit messages!
+   * Note: Write descriptive commit messages!
 
 2. Push your changes:
    ```jsx   
@@ -69,7 +73,11 @@ Each exercise is configured with an autograder that provides immediate feedback 
 
 ### Accessing Test Reports 📑
 An HTML report and a coverage report will be generated on push or pull request, and can be found by following the steps bellow:
-1. Navigate to the [Actions tab](https://github.com/Northeastern-University-SV/pyLab/actions) in your repository.
+1. Navigate to the *Actions* tab of your repository 
+```jsx
+https://github.com/Northeastern-University-SV/<name_of_repository_created>/actions
+```
+* Note: Replace `name_of_repository_created` with your repository.  
 2. Find the workflow run for your latest push.
 3. Download the `test-report` and `coverage-report` artifacts.
 
