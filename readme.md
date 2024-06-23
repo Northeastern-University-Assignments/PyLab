@@ -64,6 +64,8 @@ You can use the [GitHub Desktop](https://desktop.github.com/) app to get started
    git push origin main
    ```
    
+![Terminal Snapshot](./media/terminal.png)
+
 
 ## Grading and Feedback 💯
 Each exercise is configured with an autograder that provides immediate feedback on your submissions.
