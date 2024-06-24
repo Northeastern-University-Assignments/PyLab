@@ -19,7 +19,7 @@ The problem statements are available at each exercise's sub-folders:
    ```jsx   
    git clone https://github.com/Northeastern-University-Assignments/<name_of_repository_created>.git
    ```
-* Note: Replace `name_of_repository_created` with your repository. URL can be found at:  
+* Note: Replace `name_of_repository_created` with your repository. URL can be found by clicking on `< > Code`:  
 ![Python Lab Exercises](./media/git_clone_link.png)
 
 2. Navigate to the folder where repository is cloned:
@@ -73,15 +73,21 @@ Each exercise is configured with an autograder that provides immediate feedback 
 * Exercise 2 uses GitHub's built-in autograder with a `test2.py` file.
 * Exercise 3 uses a custom autograder with `ci.yml`, `pytest`, and generates an HTML test report.
 
-### Accessing Test Reports 📑
-An HTML report and a coverage report will be generated on push or pull request, and can be found by following the steps bellow:
-1. Navigate to the *Actions* tab of your repository 
+### Accessing Test Results 📑
+
+1. Go to:
 ```jsx
-https://github.com/Northeastern-University-Assignments/<name_of_repository_created>/actions
+   https://github.com/Northeastern-University-Assignments/<name_of_repository_created>/actions/workflows/classroom.yml
 ```
-* Note: Replace `name_of_repository_created` with your repository.  
-2. Find the workflow run for your latest push.
-3. Download the `test-report` and `coverage-report` artifacts.
+* Note: Replace `name_of_repository_created` with your repository. 
+
+2. Find the workflow run for your latest push
+![Actions Workflow](./media/actions_workflow.png)
+3. Click on `run-autograding-tests`
+![run-autograding-tests](./media/run-autograding-tests.png) 
+4. Expand `Autograding Reporter` to see your results
+![AutogradingReporter](./media/AutogradingReporter.png)
+![Results](./media/results.png)
 
 ## Help and Discussion 🤔
 * Report any issues or ask questions using the [Issues](https://github.com/Northeastern-University-Assignments/PyLab/issues) tab.
