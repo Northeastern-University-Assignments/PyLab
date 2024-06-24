@@ -1,0 +1,82 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Exercise1 Test - testing basic case (5)
+      id: exercise1-test-testing-basic-case-5
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Exercise1 Test - testing basic case (5)
+        setup-command: ''
+        command: cd exercise1 && python3 exercise1.py || python exercise1.py
+        input: '5'
+        expected-output: '120'
+        comparison-method: exact
+        timeout: 1
+        max-score: 5
+    - name: Exercise1 Test - testing for zero
+      id: exercise1-test-testing-for-zero
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Exercise1 Test - testing for zero
+        setup-command: ''
+        command: cd exercise1 && python3 exercise1.py || python exercise1.py
+        input: '0'
+        expected-output: '1'
+        comparison-method: exact
+        timeout: 1
+        max-score: 5
+    - name: Exercise1 Test - testing negative number
+      id: exercise1-test-testing-negative-number
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Exercise1 Test - testing negative number
+        setup-command: ''
+        command: cd exercise1 && python3 exercise1.py || python exercise1.py
+        input: "-1"
+        expected-output: Error
+        comparison-method: exact
+        timeout: 1
+        max-score: 5
+    - name: Exercise2 Tests
+      id: exercise2-tests
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise2 Tests
+        setup-command: pip install -r requirements.txt
+        command: cd exercise2 && python3 -m unittest discover || python -m unittest
+          discover
+        timeout: 5
+        max-score: 15
+    - name: Exercise3 Tests
+      id: exercise3-tests
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise3 Tests
+        setup-command: pip install -r requirements.txt
+        command: pytest --cov=exercise3 exercise3/test3.py --html=exercise3/report.html
+          || python3 -m pytest --cov=exercise3 exercise3/test3.py --html=exercise3/report.html
+          || python -m pytest --cov=exercise3 exercise3/test3.py --html=exercise3/report.html
+        timeout: 5
+        max-score: 20
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        EXERCISE1-TEST-TESTING-BASIC-CASE-5_RESULTS: "${{steps.exercise1-test-testing-basic-case-5.outputs.result}}"
+        EXERCISE1-TEST-TESTING-FOR-ZERO_RESULTS: "${{steps.exercise1-test-testing-for-zero.outputs.result}}"
+        EXERCISE1-TEST-TESTING-NEGATIVE-NUMBER_RESULTS: "${{steps.exercise1-test-testing-negative-number.outputs.result}}"
+        EXERCISE2-TESTS_RESULTS: "${{steps.exercise2-tests.outputs.result}}"
+        EXERCISE3-TESTS_RESULTS: "${{steps.exercise3-tests.outputs.result}}"
+      with:
+        runners: exercise1-test-testing-basic-case-5,exercise1-test-testing-for-zero,exercise1-test-testing-negative-number,exercise2-tests,exercise3-tests
