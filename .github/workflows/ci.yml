@@ -19,20 +19,23 @@ jobs:
           python -m pip install --upgrade pip || echo "Failed to upgrade pip. Continuing..."
           pip install pytest pytest-html pytest-cov || echo "Failed to install dependencies. Check network connectivity or requirements.txt"
 
-      - name: Install test coverage tool
-        run: pip install pytest-cov
+      - name: Run Exercise 1 script
+        run: |
+          python3 exercise1/exercise1.py || python exercise1/exercise1.py
 
-      - name: Run unit tests for Exercise1 and Exercise2
-        run: python3 -m unittest discover Exercise1 Exercise2
+      - name: Run unit tests for Exercise 2
+        run: |
+          python3 -m unittest discover exercise2 || python -m unittest discover exercise2
 
-      - name: Run pytest tests for Exercise3 with HTML report and coverage
-        run: pytest --cov=exercise3 Exercise3/test3.py --html=report.html
+      - name: Run pytest tests for Exercise 3 with HTML report and coverage
+        run: |
+          pytest --cov=exercise3 exercise3/test3.py --html=exercise3/report.html
 
       - name: Upload test report
         uses: actions/upload-artifact@v2
         with:
           name: test-report
-          path: report.html
+          path: exercise3/report.html
 
       - name: Upload coverage report (optional)
         uses: actions/upload-artifact@v2

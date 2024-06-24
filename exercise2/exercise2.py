@@ -7,7 +7,13 @@ def is_palindrome(s):
     # Placeholder: return s == s[::-1]
     pass
 
+if __name__ == "__main__":
+    import sys
+    input_value = int(sys.stdin.read().strip())
+    print(is_palindrome(input_value))
+
 # Example usage:
 # print(is_palindrome("racecar"))  # Expected output: True
 # print(is_palindrome("hello"))    # Expected output: False
 # print(is_palindrome("Level"))    # Expected output: True
+# print(is_palindrome("a"))        # Expected output: True

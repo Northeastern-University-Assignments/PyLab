@@ -8,9 +8,9 @@ Welcome to the Python Lab Exercises! This repository contains three engaging exe
 ## Explore the Exercises 🔭
 The problem statements are available at each exercise's sub-folders:  
 
-* [Exercise 1: Factorial Calculation](https://github.com/Northeastern-University-SV/pyLab/exercise1)  
-* [Exercise 2: Palindrome Checker](https://github.com/Northeastern-University-SV/pyLab/exercise2)  
-* [Exercise 3: Custom List Sorting](https://github.com/Northeastern-University-SV/pyLab/exercise3)
+* [Exercise 1: Factorial Calculation](https://github.com/Northeastern-University-SV/pyLab/tree/main/exercise1)  
+* [Exercise 2: Palindrome Checker](https://github.com/Northeastern-University-SV/pyLab/tree/main/exercise2)  
+* [Exercise 3: Custom List Sorting](https://github.com/Northeastern-University-SV/PyLab/tree/main/exercise3)
 
 ## Getting Started 🏃🏻‍♂️‍➡️
 

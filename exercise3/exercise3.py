@@ -6,5 +6,10 @@ def custom_sort(lst):
     # Hint: Use list comprehensions and sorted()
     return # placeholder
 
+if __name__ == "__main__":
+    import sys
+    input_value = int(sys.stdin.read().strip())
+    print(custom_sort(input_value))
+
 # Example usage:
 # print(custom_sort([4, 1, 3, 2]))  # Expected output: [2, 4, 1, 3]
