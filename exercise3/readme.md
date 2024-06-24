@@ -19,7 +19,7 @@ Write a Python function `custom_sort(lst)` that sorts a list of integers such th
 An HTML report and a coverage report will be generated on push or pull request, and can be found by following the steps bellow:
 1. Navigate to the *Actions* tab of your repository 
 ```jsx
-https://github.com/Northeastern-University-SV/<name_of_repository_created>/actions
+https://github.com/Northeastern-University-Assignments/<name_of_repository_created>/actions
 ```
 * Note: Replace `name_of_repository_created` with your repository.  
 2. Find the workflow run for your latest push.
